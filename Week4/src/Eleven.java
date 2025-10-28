@@ -32,7 +32,6 @@ class StopWordFilter {
 
     private void load(String ignore) {
         try {
-            // 使用当前目录的 stop_words.txt
             String data = Files.readString(Paths.get("stop_words.txt"));
             stopWords.addAll(Arrays.asList(data.split(",")));
             for (char c = 'a'; c <= 'z'; c++) stopWords.add(String.valueOf(c));
@@ -112,3 +111,4 @@ public class Eleven {
         wf.run(args[0]);
     }
 }
+
